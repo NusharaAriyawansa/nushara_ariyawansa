@@ -184,12 +184,12 @@ export default function LabsAndWriteups() {
         <div className="space-y-6">
 
           {/* Red / Blue / Purple selector */}
-          <div className="inline-flex flex-nowrap gap-2 sm:gap-3 w-fit max-w-full">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 w-full sm:w-fit">
             {CATEGORIES.map(cat => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-3 sm:px-5 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap border transition-all duration-200 ${
+                className={`px-2 sm:px-5 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap border transition-all duration-200 ${
                   activeCategory === cat.id
                     ? `${cat.activeBg} ${cat.activeText} ${cat.activeBorder}`
                     : 'bg-card/30 text-muted-foreground border-border/50 hover:text-foreground'
