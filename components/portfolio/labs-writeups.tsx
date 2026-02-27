@@ -28,7 +28,7 @@ const CATEGORIES = [
   {
     id: 'Red',
     label: 'Red Team',
-    description: 'Offensive security — exploitation, privilege escalation, and attack simulation.',
+    description: 'Offensive security - exploitation, privilege escalation, and attack simulation.',
     activeBg: 'bg-red-500/10',
     activeBorder: 'border-red-500/40',
     activeText: 'text-red-400',
@@ -40,7 +40,7 @@ const CATEGORIES = [
   {
     id: 'Blue',
     label: 'Blue Team',
-    description: 'Defensive security — threat detection, log analysis, and incident response.',
+    description: 'Defensive security - threat detection, log analysis, and incident response.',
     activeBg: 'bg-blue-500/10',
     activeBorder: 'border-blue-500/40',
     activeText: 'text-blue-400',
@@ -52,7 +52,7 @@ const CATEGORIES = [
   {
     id: 'Purple',
     label: 'Purple Team',
-    description: 'Combined red and blue — adversary simulation with defensive validation.',
+    description: 'Combined red and blue - adversary simulation with defensive validation.',
     activeBg: 'bg-purple-500/10',
     activeBorder: 'border-purple-500/40',
     activeText: 'text-purple-400',
@@ -116,10 +116,10 @@ export default function LabsAndWriteups() {
     <div className="space-y-8">
 
       {/* Main toggle */}
-      <div className="flex rounded-lg border border-border overflow-hidden w-fit">
+      <div className="inline-flex rounded-lg border border-border overflow-hidden w-fit max-w-full">
         <button
           onClick={() => setActiveTab('portswigger')}
-          className={`px-8 py-2.5 text-sm font-medium transition-all duration-200 border-r border-border ${
+          className={`px-4 sm:px-8 py-2.5 text-sm font-medium whitespace-nowrap transition-all duration-200 border-r border-border ${
             activeTab === 'portswigger'
               ? 'bg-secondary/20 text-secondary'
               : 'text-foreground hover:text-foreground bg-card/30'
@@ -129,7 +129,7 @@ export default function LabsAndWriteups() {
         </button>
         <button
           onClick={() => setActiveTab('tryhackme')}
-          className={`px-8 py-2.5 text-sm font-medium transition-all duration-200 ${
+          className={`px-4 sm:px-8 py-2.5 text-sm font-medium whitespace-nowrap transition-all duration-200 ${
             activeTab === 'tryhackme'
               ? 'bg-secondary/20 text-secondary'
               : 'text-muted-foreground hover:text-foreground bg-card/30'
@@ -142,14 +142,14 @@ export default function LabsAndWriteups() {
       {/* PortSwigger Content */}
       {activeTab === 'portswigger' && (
         <div className="space-y-6">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <h3 className="text-lg font-semibold text-foreground">Security Vulnerability Writeups</h3>
             <span className="text-sm text-muted-foreground">
               <span className="text-primary font-semibold">17</span> / 17 pathways completed
             </span>
           </div>
 
-          <div className="grid grid-cols-6 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
             {vulnerabilities.map((vuln, idx) => (
               <div
                 key={idx}
@@ -184,7 +184,7 @@ export default function LabsAndWriteups() {
         <div className="space-y-6">
 
           {/* Red / Blue / Purple selector */}
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             {CATEGORIES.map(cat => (
               <button
                 key={cat.id}
@@ -222,11 +222,11 @@ export default function LabsAndWriteups() {
 
           {/* Room cards */}
           {!loading && !error && currentRooms.length > 0 && (
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
               {currentRooms.map((room, idx) => (
                 <div
                   key={idx}
-                  className={`flex items-center justify-between p-3 rounded-lg border border-border/50 bg-card/30 ${currentCat.hoverBorder} hover:-translate-y-0.5 transition-all duration-300 group`}
+                  className={`flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 p-3 rounded-lg border border-border/50 bg-card/30 ${currentCat.hoverBorder} hover:-translate-y-0.5 transition-all duration-300 group`}
                 >
                   <span className="text-sm font-medium text-foreground">{room.name}</span>
                   <a

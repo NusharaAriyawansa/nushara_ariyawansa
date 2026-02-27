@@ -45,7 +45,7 @@ const devopsAndCloud = [
 
 function IconGrid({ tools }: { tools: { name: string; icon: string }[] }) {
   return (
-    <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-11 gap-3">
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-11 gap-2 sm:gap-3">
       {tools.map((tool) => (
         <div
           key={tool.name}
@@ -67,12 +67,12 @@ function IconGrid({ tools }: { tools: { name: string; icon: string }[] }) {
 
 export default function TechStack() {
   return (
-    <div className="space-y-15">
+    <div className="space-y-10 sm:space-y-12">
 
       {/* Section 1 — Security & GRC */}
       <div>
         <h3 className="text-lg font-semibold text-foreground mb-3">Security & GRC</h3>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3">
           {securityTools.map((tool) => (
             <div
               key={tool.name}

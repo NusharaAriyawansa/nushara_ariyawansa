@@ -2,6 +2,7 @@
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const certifications = [
   {
@@ -134,25 +135,25 @@ const certifications = [
   },
 ];
 
-const VISIBLE = 4;
-
 export default function Certifications() {
   const [startIdx, setStartIdx] = useState(0);
   const [expanded, setExpanded] = useState<number | null>(null);
+  const isMobile = useIsMobile();
+  const visibleCount = isMobile ? 1 : 4;
 
   const prev = () => setStartIdx((p) => (p - 1 + certifications.length) % certifications.length);
   const next = () => setStartIdx((p) => (p + 1) % certifications.length);
 
-  const visibleCerts = Array.from({ length: VISIBLE }, (_, i) =>
+  const visibleCerts = Array.from({ length: visibleCount }, (_, i) =>
     certifications[(startIdx + i) % certifications.length]
   );
 
   return (
-    <div className="relative px-6">
+    <div className="relative px-0 sm:px-6">
       {/* Left Arrow */}
       <button
         onClick={prev}
-        className="absolute -left-1 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg"
+        className="absolute left-1 sm:-left-1 top-[80%] -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg"
       >
         <ChevronLeft size={20} />
       </button>
@@ -160,13 +161,13 @@ export default function Certifications() {
       {/* Right Arrow */}
       <button
         onClick={next}
-        className="absolute -right-1 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg"
+        className="absolute right-1 sm:-right-1 top-[80%] -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg"
       >
         <ChevronRight size={20} />
       </button>
 
       {/* Cards */}
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5">
         {visibleCerts.map((cert, idx) => (
           <div
             key={`${startIdx}-${idx}`}
@@ -231,7 +232,7 @@ export default function Certifications() {
       {/* Lightbox — click image to expand full screen */}
       {expanded !== null && (
         <div
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-8"
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 sm:p-8"
           onClick={() => setExpanded(null)}
         >
           <div className="max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>

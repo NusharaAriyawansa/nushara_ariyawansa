@@ -3,6 +3,7 @@
 import { Github, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const projects = [
   {
@@ -79,33 +80,33 @@ const projects = [
   },
 ];
 
-const VISIBLE = 4;
-
 export default function ProjectsGrid() {
   const [startIdx, setStartIdx] = useState(0);
+  const isMobile = useIsMobile();
+  const visibleCount = isMobile ? 1 : 4;
 
   const prev = () => setStartIdx((p) => (p - 1 + projects.length) % projects.length);
   const next = () => setStartIdx((p) => (p + 1) % projects.length);
 
-  const visibleProjects = Array.from({ length: VISIBLE }, (_, i) =>
+  const visibleProjects = Array.from({ length: visibleCount }, (_, i) =>
     projects[(startIdx + i) % projects.length]
   );
 
   return (
-    <div className="relative px-6">
-      <button onClick={prev} className="absolute -left-1 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg">
+    <div className="relative px-0 sm:px-6">
+      <button onClick={prev} className="absolute left-1 sm:-left-1 top-[78%] -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg">
         <ChevronLeft size={20} />
       </button>
-      <button onClick={next} className="absolute -right-1 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg">
+      <button onClick={next} className="absolute right-1 sm:-right-1 top-[78%] -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg">
         <ChevronRight size={20} />
       </button>
 
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5">
         {visibleProjects.map((project, idx) => (
           <div
             key={`${startIdx}-${idx}`}
             className="group rounded-lg border border-border/50 bg-card/30 hover:bg-card/70 hover:border-primary/50 overflow-hidden transition-all duration-300"
-            style={{ height: '500px' }}
+            style={{ minHeight: '500px' }}
           >
             {/* Image — always 200px */}
             <div style={{ height: '200px', overflow: 'hidden' }} className="border-b border-border/30">
