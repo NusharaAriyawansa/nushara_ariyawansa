@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react';
 import Navbar from '@/components/navbar';
 import Hero from '@/components/sections/hero';
 import About from '@/components/sections/about';
-import ExperienceEducation from '@/components/sections/experience-education';
-import PortfolioShowcase from '@/components/sections/portfolio-showcase';
+import Experience from '@/components/sections/experience';
+import MyWork from '@/components/sections/my-work';
 import Contact from '@/components/sections/contact';
+import EduAchievements from '@/components/sections/education-achievements';
 
 export default function Home() {
   return (
@@ -14,8 +15,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <ExperienceEducation />
-      <PortfolioShowcase />
+      <Experience />
+      <MyWork />
+      <EduAchievements />
       <Contact />
     </main>
   );

@@ -12,7 +12,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      const sections = ['hero', 'about', 'experience', 'portfolio', 'contact'];
+      const sections = ['hero', 'about', 'experience', 'portfolio', 'education', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -37,6 +37,7 @@ export default function Navbar() {
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'portfolio', label: 'My Work' },
+    { id: 'education', label: 'Education' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -48,7 +49,6 @@ export default function Navbar() {
     }`}>
       <div className="w-full px-6 sm:px-10 lg:px-16 py-4 flex items-center justify-between">
 
-        {/* Logo */}
         <Link
           href="#hero"
           onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}
@@ -57,7 +57,6 @@ export default function Navbar() {
           &lt;NA /&gt;
         </Link>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8 ml-auto">
           {navItems.map(item => (
             <Link
@@ -77,7 +76,6 @@ export default function Navbar() {
             </Link>
           ))}
 
-          {/* CV Button */}
           <a
             href="/cv.pdf"
             download
@@ -88,7 +86,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           className="md:hidden text-foreground/70 hover:text-primary transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -97,7 +94,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border/50 px-6 py-4 flex flex-col gap-4">
           {navItems.map(item => (
