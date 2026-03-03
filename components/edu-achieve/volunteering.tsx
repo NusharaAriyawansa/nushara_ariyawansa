@@ -35,7 +35,7 @@ const volunteeringItems = [
 	{
 		organization: 'Visakha Vidyalaya',
 		imageLabel: '/images/volunteering/visakha.jpeg',
-		period: '2016 - 2019',
+		period: '2007 - 2020',
 		roles:
 			'Senior Prefect (2018/19), Junior Prefect (2016/17), National Squash Athlete, President Girl Guide, Member of the Senior Eastern Band',
 		details:
@@ -54,7 +54,7 @@ const volunteeringItems = [
 	{
 		organization: 'Gavel Club of University of Colombo',
 		imageLabel: '/images/volunteering/gavel.jpeg',
-		period: '2022 - 2023',
+		period: '2022 - 2025',
 		roles: "Delegates Team Lead for SpeakOut'22, Logistics Team Lead for Enliven'23",
 		details:
 			'Coordinated delegates and logistics for public speaking events, ensuring smooth event execution.',
@@ -63,7 +63,7 @@ const volunteeringItems = [
 	{
 		organization: 'IEEE WIE Student Branch Affinity Group of UCSC',
 		imageLabel: '/images/volunteering/3.jpeg',
-		period: '2022 - 2023',
+		period: '2022 - 2025',
 		roles: "Content Team Lead for WiCSat'22, Public Relations Lead for FallCode'23",
 		details:
 			'Led content and public relations efforts to increase participation and visibility for women-in-tech initiatives.',
@@ -92,14 +92,14 @@ export default function Volunteering() {
 		<div className="relative px-0 sm:px-6">
 			<button
 				onClick={prev}
-				className="absolute left-1 sm:-left-1 top-[80%] -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg"
+				className="absolute left-1 sm:-left-1 top-[67%] -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg"
 			>
 				<ChevronLeft size={20} />
 			</button>
 
 			<button
 				onClick={next}
-				className="absolute right-1 sm:-right-1 top-[80%] -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg"
+				className="absolute right-1 sm:-right-1 top-[67%] -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 border border-primary/60 hover:bg-primary/40 flex items-center justify-center text-primary hover:text-white transition-all duration-300 shadow-lg"
 			>
 				<ChevronRight size={20} />
 			</button>
@@ -134,7 +134,7 @@ export default function Volunteering() {
 						</div>
 
 						<div className="p-4 flex-1 flex flex-col">
-							<h3 className="text-sm font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-3">
+							<h3 className="text-sm font-semibold text-foreground mb-2 transition-colors leading-snug line-clamp-3">
 								{item.roles}
 							</h3>
 

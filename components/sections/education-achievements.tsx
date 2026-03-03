@@ -1,14 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import { GraduationCap, HandHeart, Trophy } from 'lucide-react';
 import Education from '@/components/edu-achieve/education';
 import Volunteering from '@/components/edu-achieve/volunteering';
 import Awards from '@/components/edu-achieve/awards';
 
 const tabs = [
-  { id: 'education', label: 'Education' },
-  { id: 'volunteering', label: 'Volunteering' },
-  { id: 'awards', label: 'Awards' },
+  { id: 'education', label: 'Education', icon: GraduationCap },
+  { id: 'volunteering', label: 'Volunteering', icon: HandHeart },
+  { id: 'awards', label: 'Awards', icon: Trophy },
 ];
 
 export default function PortfolioShowcase() {
@@ -41,7 +42,10 @@ export default function PortfolioShowcase() {
                   : 'text-muted-foreground hover:text-foreground bg-card/30'
               }`}
             >
-              {tab.label}
+              <span className="inline-flex items-center gap-1.5">
+                <tab.icon size={14} aria-hidden="true" />
+                <span>{tab.label}</span>
+              </span>
             </button>
           ))}
         </div>

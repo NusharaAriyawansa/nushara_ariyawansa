@@ -1,16 +1,17 @@
 'use client';
 
 import { useState } from 'react';
+import { Code2, FolderKanban, FlaskConical, BadgeCheck } from 'lucide-react';
 import TechStack from '@/components/portfolio/tech-stack';
 import ProjectsGrid from '@/components/portfolio/projects-grid';
 import Certifications from '@/components/portfolio/certifications';
 import LabsAndWriteups from '@/components/portfolio/labs-writeups';
 
 const tabs = [
-  { id: 'tech', label: 'Skills' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'labs', label: 'Labs & Writeups' },
-  { id: 'certifications', label: 'Certifications' },
+  { id: 'tech', label: 'Skills', icon: Code2 },
+  { id: 'projects', label: 'Projects', icon: FolderKanban },
+  { id: 'labs', label: 'Labs & Writeups', icon: FlaskConical },
+  { id: 'certifications', label: 'Certifications', icon: BadgeCheck },
 ];
 
 export default function PortfolioShowcase() {
@@ -43,7 +44,10 @@ export default function PortfolioShowcase() {
                   : 'text-muted-foreground hover:text-foreground bg-card/30'
               }`}
             >
-              {tab.label}
+              <span className="inline-flex items-center gap-1.5">
+                <tab.icon size={14} aria-hidden="true" />
+                <span>{tab.label}</span>
+              </span>
             </button>
           ))}
         </div>

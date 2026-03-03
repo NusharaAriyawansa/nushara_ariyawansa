@@ -4,23 +4,23 @@ const education = [
 	{
 		degree: 'BSc (Hons) in Computer Science',
 		institution: 'University of Colombo School of Computing',
-		period: '2022 – present',
+		period: 'May 2022 – April 2026',
 		grade: 'GPA: 3.61 / 4.00',
 		details: [
-			'Key Modules: Data Structures & Algorithms | Software Engineering | Computer Networks | Operating Systems | Database Management | Object-Oriented Programming | Machine Learning | Digital Forensics',
+			'Key Modules: Data Structures & Algorithms | Software Engineering | Computer Networks | Operating Systems | Database Management | Object-Oriented Programming | Information Security | Machine Learning | Digital Forensics',
 		],
 	},
 	{
 		degree: 'Bachelor of Laws (LLB)',
 		institution: 'University of London',
-		period: '2021 – 2024',
+		period: 'Nov 2021 – Nov 2024',
 		grade: 'Grade: Second Class Honours (Upper Division)',
 		details: [
 			'Modules: Contract Law | Criminal Law | Public Law | Legal Systems and Methods | Tort Law | EU Law | Administrative Law | Property Law | Jurisprudence | Intellectual Property Law | Criminology | Equity and Trusts',
 		],
 	},
 	{
-		degree: 'Mentee — ScholarX',
+		degree: 'Mentee - ScholarX',
 		institution: 'Sustainable Education Foundation, Sri Lanka',
 		period: 'Oct 2023 – May 2024',
 		grade: '',
@@ -59,7 +59,7 @@ const splitLabeledDetails = (text: string) => {
 export default function Education() {
 	return (
 		<div className="relative">
-			<div className="absolute left-6 top-0 bottom-0 w-px bg-border/50 hidden sm:block" />
+			<div className="absolute left-6 top-0 bottom-0 w-px bg-primary/60 hidden sm:block" />
 
 			<div className="space-y-5">
 				{education.map((item, index) => (

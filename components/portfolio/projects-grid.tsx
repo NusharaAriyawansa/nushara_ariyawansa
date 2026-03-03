@@ -130,7 +130,7 @@ export default function ProjectsGrid() {
               </span>
 
               {/* Title — 1 line, ~20px */}
-              <h3 className="text-sm font-semibold text-foreground mb-1 group-hover:text-primary transition-colors"
+              <h3 className="text-sm font-semibold text-foreground mb-1 transition-colors"
                 style={{ overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
                 {project.title}
               </h3>

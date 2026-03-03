@@ -47,7 +47,7 @@ export default function Experience() {
 
         <div className="relative">
           {/* Vertical timeline line */}
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-border/50 hidden sm:block" />
+          <div className="absolute left-6 top-0 bottom-0 w-px bg-primary/60 hidden sm:block" />
 
           <div className="space-y-8">
             {experiences.map((exp, idx) => {

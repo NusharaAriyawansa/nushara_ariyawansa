@@ -4,13 +4,13 @@ import { useState } from 'react';
 
 const awards = [
 	{
-		name: 'InspiHER{Tech} V2.0 — Top 10 Finalists',
+		name: 'InspiHER{Tech} V2.0 - Top 10 Finalists',
 		image: '/images/awards/award-1.jpg',
 		issuer: 'IEEE WIE Student Branch Affinity Group of SLTC',
 		issued: 'Jan 2024',
 		learned:
 			'My team and I secured a top 10 Finalists position among 81 teams across 23 universities in this hackathon, featuring stages like MATLAB 101, Mindfest, and Codewars.',
-		skills: ['Hackathon', 'Teamwork', 'Problem Solving'],
+		skills: ['Competitive Programming', 'MATLAB', 'Problem Solving'],
 	},
 	{
 		name: 'IEEEXtreme 17.0',
@@ -22,13 +22,13 @@ const awards = [
 		skills: ['Competitive Programming', 'Problem Solving'],
 	},
 	{
-		name: "CyberZee '23 — Top 10 Semifinalists",
+		name: "CyberZee '23 - Top 10 Semifinalists",
 		image: '/images/awards/award-3.jpg',
 		issuer: 'ISACA Student Group (University of Kelaniya) & ISACA Sri Lanka Chapter',
 		issued: 'Jul 2023',
 		learned:
 			'Organized by the ISACA Student Group of the University of Kelaniya in collaboration with the ISACA Sri Lanka Chapter, my team and I emerged as top 10 semifinalists in the inter-university cyber security quiz competition.',
-		skills: ['Cybersecurity', 'Quiz Competition', 'Teamwork'],
+		skills: ['Cybersecurity', 'Quiz Competition'],
 	},
 ];
 
@@ -56,7 +56,7 @@ export default function Awards() {
 						</div>
 
 						<div className="p-4 flex-1 flex flex-col">
-							<h3 className="text-sm font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">
+							<h3 className="text-sm font-semibold text-foreground mb-2 transition-colors leading-snug line-clamp-2">
 								{award.name}
 							</h3>
 

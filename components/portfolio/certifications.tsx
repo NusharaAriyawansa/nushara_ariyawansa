@@ -189,7 +189,7 @@ export default function Certifications() {
 
             {/* Content */}
             <div className="p-4 flex-1 flex flex-col">
-              <h3 className="text-sm font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">
+              <h3 className="text-sm font-semibold text-foreground mb-2 transition-colors leading-snug line-clamp-2">
                 {cert.name}
               </h3>
 
