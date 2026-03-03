@@ -37,9 +37,9 @@ const volunteeringItems = [
 		imageLabel: '/images/volunteering/visakha.jpeg',
 		period: '2016 - 2019',
 		roles:
-			'Senior Prefect (2018/19), Junior Prefect (2016/17), National Squash Player, President Girl Guide, Member of the Senior Eastern Band',
+			'Senior Prefect (2018/19), Junior Prefect (2016/17), National Squash Athlete, President Girl Guide, Member of the Senior Eastern Band',
 		details:
-			'Served in student leadership roles while actively contributing to sports, guiding, and extracurricular activities.',
+			'Served in student leadership roles while actively contributing to sports, Girl Guiding movement, and extracurricular activities.',
 		skills: ['Student Leadership', 'Teamwork', 'Sportsmanship', 'Discipline'],
 	},
 	{

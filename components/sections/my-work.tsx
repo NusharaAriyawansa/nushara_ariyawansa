@@ -20,7 +20,7 @@ export default function PortfolioShowcase() {
     <section id="portfolio" className="relative isolate z-[60] py-10 pt-20 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center">
       <div className="w-full max-w-[1600px] mx-auto">
         <h2 className="text-center text-4xl sm:text-5xl font-bold text-foreground mb-12 text-balance">
-          My Work
+          Projects
         </h2>
 
         {/* Tab bar */}

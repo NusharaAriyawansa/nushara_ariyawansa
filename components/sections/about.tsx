@@ -46,17 +46,14 @@ export default function About() {
             </h3>
 
             <p className="text-lg text-foreground/80 leading-relaxed">
-              I&apos;m a cybersecurity-focused Computer Science undergraduate at the University of Colombo, with a dual degree in Law (LLB) from the University of London. I specialize in Application Security and Governance, Risk & Compliance (GRC).
+              I&apos;m a cybersecurity-focused Computer Science undergraduate (April 2026) at the University of Colombo, with a dual degree in Law (LLB) from the University of London. I specialize in Application Security and Governance, Risk & Compliance (GRC).
             </p>
 
             <p className="text-base text-foreground/70 leading-relaxed">
               I've built automated security testing frameworks, conducted penetration testing on real-world platforms, and collaborated with engineering teams to embed security into development workflows. My legal background gives me a unique edge in translating technical vulnerabilities into business and regulatory risk.
             </p>
 
-            <div className="flex items-center gap-3 rounded-xl border border-border bg-card/60 px-4 py-3 text-sm sm:text-base text-foreground/90">
-              <Quote className="h-4 w-4 text-secondary flex-shrink-0" />
-              <p className="italic">"Where code meets compliance - securing systems from the inside out."</p>
-            </div>
+            
 
             <div className="flex flex-wrap gap-3">
               <a

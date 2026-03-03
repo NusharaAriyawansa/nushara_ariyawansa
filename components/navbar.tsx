@@ -36,8 +36,8 @@ export default function Navbar() {
   const navItems = [
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
-    { id: 'portfolio', label: 'My Work' },
-    { id: 'education', label: 'Education' },
+    { id: 'portfolio', label: 'Projects' },
+    { id: 'education', label: 'Background' },
     { id: 'contact', label: 'Contact' },
   ];
 
